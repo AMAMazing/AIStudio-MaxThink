@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "AI Studio Auto High Thinking",
+  "version": "1.0.0",
+  "description": "Automatically changes Gemini thinking level to High when set to Medium in Google AI Studio.",
+  "permissions": [],
+  "host_permissions": [
+    "*://aistudio.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://aistudio.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
